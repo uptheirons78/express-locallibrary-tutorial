@@ -14,6 +14,7 @@ var app = express();
 
 //setup Mongoose connection
 var mongoose = require('mongoose');
+//var mongoDB = config.getDbConnectionString();
 var mongoDB = config.getDbConnectionString();
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -54,3 +55,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
